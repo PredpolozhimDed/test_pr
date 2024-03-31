@@ -14,12 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MainController::class, "home"] );
+Route::get('/', [MainController::class, "home"]);
 
+//TODO В роутенге во всех проектах, как правила не используются функции напрямую, все проводиться через контроллеры
 Route::get('/joke', function () {
-    return view('about');
+    return view('pages.about');
 });
 
 Route::get('/user/{id}/{name}', function ($id, $name) {
-    return "ID. ". $id. ". Name: ". $name;
+    return "ID. " . $id . ". Name: " . $name;
 });

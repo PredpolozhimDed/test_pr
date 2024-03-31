@@ -8,6 +8,7 @@ class MainController extends Controller
 {
     public function home()
     {
-        return view('home');
+        //TODO Нужен сервис который будет формировать необходимые переменные для страницы и передавать их во view
+        return view('pages.home');
     }
 }
