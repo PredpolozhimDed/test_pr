@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainController::class, "home"] );
 
-Route::get('/joke', function () {
-    return view('about');
-});
+Route::get('/joke', [MainController::class, "joke"] );
 
-Route::get('/user/{id}/{name}', function ($id, $name) {
-    return "ID. ". $id. ". Name: ". $name;
-});
+Route::get('/tap', [MainController::class, "tap"] );
+
+Route::post('/tap/check', [MainController::class, "tap_check"] );
+//
+//Route::get('/user/{id}/{name}', function ($id, $name) {
+//    return "ID. ". $id. ". Name: ". $name;
+//});
